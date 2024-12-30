@@ -47,3 +47,7 @@ Console.WriteLine(new TournamentWinner().FindWinner(teams,teamsResult));
 Console.WriteLine(new NonConstrutibleChange().NonChangeableAmout(new[] { 5, 7, 1, 1, 2, 3, 22 }));
 
 Console.WriteLine(new ReverseWordsInString().Reverse("test        "));
+
+PrettyPrint.Print(new MatrixTranspose().Transpose(new int[,] { { 1, 2 } }));
+
+Console.WriteLine(new ClosetValueInBST().GetClosest(rootNode,12));
