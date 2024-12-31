@@ -53,3 +53,6 @@ PrettyPrint.Print(new MatrixTranspose().Transpose(new int[,] { { 1, 2 } }));
 Console.WriteLine(new ClosetValueInBST().GetClosest(rootNode,12));
 
 PrettyPrint.Print(new SpiralTraverse().Traverse(new int[,] { { 1, 2, 3, 4 }, { 10, 11, 12, 5 }, { 9, 8, 7, 6 } }));
+
+var treeNode = BinaryTree.Create(new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+PrettyPrint.Print(new BranchSum().CalculateAll(treeNode));
