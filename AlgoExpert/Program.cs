@@ -56,3 +56,6 @@ PrettyPrint.Print(new SpiralTraverse().Traverse(new int[,] { { 1, 2, 3, 4 }, { 1
 
 var treeNode = BinaryTree.Create(new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
 PrettyPrint.Print(new BranchSum().CalculateAll(treeNode));
+
+var triplets = new ThreeNumberSum().FindAllTriplet(new int[]{12, 3, 1, 2, -6, 5, -8, 6},0);
+PrettyPrint.Print(triplets);

@@ -21,4 +21,13 @@ internal class PrettyPrint
             Console.WriteLine(); 
         }
     }
+    internal static void Print(List<int[]> list)
+    {
+        Console.Write("[ ");
+        foreach(var item in list)
+        {
+            Console.Write("[ " + string.Join(", ",item) + " ]");
+        }
+        Console.Write(" ]");
+    }
 }
