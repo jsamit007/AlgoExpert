@@ -59,3 +59,7 @@ PrettyPrint.Print(new BranchSum().CalculateAll(treeNode));
 
 var triplets = new ThreeNumberSum().FindAllTriplet(new int[]{12, 3, 1, 2, -6, 5, -8, 6},0);
 PrettyPrint.Print(triplets);
+Console.WriteLine();
+PrettyPrint.Print(new SmallestDifference().CalculateDifference(new int[] { -1, 5, 10, 20, 28, 3 }, new int[] { 26, 134, 135, 15, 17 }).ToList());
+
+PrettyPrint.Print(new MoveElementToEnd().MoveElements(new() { 1, 2, 3, 4, 5 }, 3));
