@@ -63,3 +63,11 @@ Console.WriteLine();
 PrettyPrint.Print(new SmallestDifference().CalculateDifference(new int[] { -1, 5, 10, 20, 28, 3 }, new int[] { 26, 134, 135, 15, 17 }).ToList());
 
 PrettyPrint.Print(new MoveElementToEnd().MoveElements(new() { 1, 2, 3, 4, 5 }, 3));
+
+Console.WriteLine(new MonotonicArray().OptimalIsMonotonic(new int[] { -1, -5, -10, -1100, -1100, -1101, -1102, -9001 }));
+
+PrettyPrint.Print(new ArrayOfProducts().GetProducts(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }).ToList());
+
+Console.WriteLine(new FirstDuplicateValue().FindDuplicate(new int[] { 1 } ));
+
+Console.WriteLine(new NodeDepth().FindDepth(treeNode));
