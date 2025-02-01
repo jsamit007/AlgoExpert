@@ -2,9 +2,8 @@
 
 internal class BinaryTree
 {
-    private static TreeNode<int> root = default!;
 
-    internal static TreeNode<int> Create(List<int> list)
+    internal static TreeNode<int> Create(List<int> list,TreeNode<int> root)
     {
         Queue<TreeNode<int>> queue = new Queue<TreeNode<int>>();
 

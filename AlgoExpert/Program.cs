@@ -1,4 +1,5 @@
 ﻿using AlgoExpert;
+using AlgoExpert.Medium;
 
 var result = new TwoNumberSum().FindPairs(new int[] { 5, 3, 6, 4, 8 }, 10);
 foreach (var item in result)
@@ -54,7 +55,7 @@ Console.WriteLine(new ClosetValueInBST().GetClosest(rootNode,12));
 
 PrettyPrint.Print(new SpiralTraverse().Traverse(new int[,] { { 1, 2, 3, 4 }, { 10, 11, 12, 5 }, { 9, 8, 7, 6 } }));
 
-var treeNode = BinaryTree.Create(new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+var treeNode = BinaryTree.Create(new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 },null);
 PrettyPrint.Print(new BranchSum().CalculateAll(treeNode));
 
 var triplets = new ThreeNumberSum().FindAllTriplet(new int[]{12, 3, 1, 2, -6, 5, -8, 6},0);
@@ -71,3 +72,11 @@ PrettyPrint.Print(new ArrayOfProducts().GetProducts(new int[] { 0, 1, 2, 3, 4, 5
 Console.WriteLine(new FirstDuplicateValue().FindDuplicate(new int[] { 1 } ));
 
 Console.WriteLine(new NodeDepth().FindDepth(treeNode));
+
+//var exprRootNode = BinaryTree.Create(new() {-1,-2,-3,-4,2,8,3,2,3 },null);
+var exprRootNode = BinaryTree.Create(new() {-3,3,2 },null);
+Console.WriteLine(new EvaluateExpressionTree().Evaluate(exprRootNode));
+
+
+var powerSet = new PowerSet().GeneratePowerSetRecursive(new() { 1, 2, 3 });
+PrettyPrint.Print(powerSet);

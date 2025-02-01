@@ -21,6 +21,19 @@ internal class PrettyPrint
             Console.WriteLine(); 
         }
     }
+
+    internal static void Print(List<List<int>> matrix)
+    {
+        for (int i = 0; i < matrix.Count; i++)
+        {
+            for (int j = 0; j < matrix[i].Count; j++)
+            {
+                Console.Write(matrix[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
     internal static void Print(List<int[]> list)
     {
         Console.Write("[ ");
