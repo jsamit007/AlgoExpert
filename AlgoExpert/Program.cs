@@ -1,4 +1,5 @@
 ﻿using AlgoExpert;
+using AlgoExpert.Easy;
 using AlgoExpert.Medium;
 
 var result = new TwoNumberSum().FindPairs(new int[] { 5, 3, 6, 4, 8 }, 10);
@@ -80,3 +81,19 @@ Console.WriteLine(new EvaluateExpressionTree().Evaluate(exprRootNode));
 
 var powerSet = new PowerSet().GeneratePowerSetRecursive(new() { 1, 2, 3 });
 PrettyPrint.Print(powerSet);
+
+Console.WriteLine("Balanced Brackets: " + new BalancedBrackets().IsBalancedBrackets("adfd[]abcf"));
+
+PrettyPrint.Print(new BinarySearch().Find(new int[,] {
+  {1, 4, 7, 12, 15, 1000},
+  {2, 5, 19, 31, 32, 1001},
+  {3, 8, 24, 33, 35, 1002},
+  {40, 41, 42, 44, 45, 1003},
+  {99, 100, 103, 106, 128, 1004}
+}, 44).ToList());
+
+new CommonCharcters().Find(new List<string> { "ab&cdef!", "f!ed&cba", "a&bce!d", "ae&fb!cd", "efa&!dbc", "eff!&fff&fffffffbcda", "eeee!efff&fffbbbbbaaaaaccccdddd", "*******!***&****abdcef************", "*******!***&****a***********f*", "*******!***&****b***********c*" }).ToList().ForEach(Console.WriteLine);
+
+new Semordnilap().Find(new string[] { "ab", "ba", "abc", "cba", "ab", "ba" }).ForEach(x => Console.WriteLine(string.Join(",", x)));
+
+Console.WriteLine(new RunLengthEncoding().Encode("AAAAAAAAAAAAABBCCCCDD"));
