@@ -10,4 +10,14 @@ internal class LinkedList
         this.value = value;
         this.next = null;
     }
+
+    public void Print()
+    {
+        var temp = this;
+        while (temp != null)
+        {
+            Console.Write(temp.value + " ");
+            temp = temp.next;
+        }
+    }
 }

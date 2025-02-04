@@ -1,6 +1,7 @@
 ﻿using AlgoExpert;
 using AlgoExpert.Easy;
 using AlgoExpert.Medium;
+using System.Xml.Linq;
 
 var result = new TwoNumberSum().FindPairs(new int[] { 5, 3, 6, 4, 8 }, 10);
 foreach (var item in result)
@@ -97,3 +98,20 @@ new CommonCharcters().Find(new List<string> { "ab&cdef!", "f!ed&cba", "a&bce!d",
 new Semordnilap().Find(new string[] { "ab", "ba", "abc", "cba", "ab", "ba" }).ForEach(x => Console.WriteLine(string.Join(",", x)));
 
 Console.WriteLine(new RunLengthEncoding().Encode("AAAAAAAAAAAAABBCCCCDD"));
+
+GraphNode graph = new("A");
+graph.AddChild("B").AddChild("C").AddChild("D");
+graph.children[0].AddChild("E").AddChild("F");
+graph.children[2].AddChild("G").AddChild("H");
+graph.children[0].children[1].AddChild("I").AddChild("J");
+graph.children[2].children[0].AddChild("K");
+
+PrettyPrint.Print(graph.DepthFirstSearch(new List<string>()));
+
+head = new DSCreator().CreateLinkedList(new int[] { 1, 3, 4, 4, 4, 5, 6, 6 });
+new LLDeleteDuplicates().DeleteDuplicates(head).Print();
+
+PrettyPrint.Print(new MinimumCharactersForWords().GetMinChars(new string[] { "this", "that", "did", "deed", "them!", "a" }).ToList());
+
+Console.WriteLine(new CeaserCipher().Encrypt("xyz",2));
+
