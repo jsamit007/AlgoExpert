@@ -140,3 +140,5 @@ PrettyPrint.Print(new TaskAssignment().AssignTasks(3, new() { 1, 3, 5, 3, 1, 4 }
 //Console.WriteLine(new LongestPeak().FindLongestPeak(new int[] { 1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3 }));
 Console.WriteLine(new LongestPeak().FindLongestPeak(new int[] { 1,2,3,4,5,1 }));
 
+Console.WriteLine(new BestSeat().Find(new int[] { 1, 1, 0, 1,1, 1, 1,0,1}));
+
