@@ -20,6 +20,21 @@ public class GraphNode
         return array;
     }
 
+    public List<string> BreadthFirstSearch(List<string> array)
+    {
+        Queue<GraphNode> queue = new Queue<GraphNode>();
+        queue.Enqueue(this);
+
+        while (queue.Count() > 0)
+        {
+            var node = queue.Dequeue();
+            array.Add(node.name);
+            foreach (var child in node.children)
+                queue.Enqueue(child);
+        }
+        return array;
+    }
+
     public GraphNode AddChild(string name)
     {
         GraphNode child = new GraphNode(name);

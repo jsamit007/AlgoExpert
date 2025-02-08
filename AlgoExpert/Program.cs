@@ -75,9 +75,7 @@ Console.WriteLine(new FirstDuplicateValue().FindDuplicate(new int[] { 1 } ));
 
 Console.WriteLine(new NodeDepth().FindDepth(treeNode));
 
-//var exprRootNode = BinaryTree.Create(new() {-1,-2,-3,-4,2,8,3,2,3 },null);
-var exprRootNode = BinaryTree.Create(new() {-3,3,2 },null);
-Console.WriteLine(new EvaluateExpressionTree().Evaluate(exprRootNode));
+
 
 
 var powerSet = new PowerSet().GeneratePowerSetRecursive(new() { 1, 2, 3 });
@@ -107,6 +105,8 @@ graph.children[0].children[1].AddChild("I").AddChild("J");
 graph.children[2].children[0].AddChild("K");
 
 PrettyPrint.Print(graph.DepthFirstSearch(new List<string>()));
+Console.WriteLine("BFS: ");
+PrettyPrint.Print(graph.BreadthFirstSearch(new List<string>()));
 
 head = new DSCreator().CreateLinkedList(new int[] { 1, 3, 4, 4, 4, 5, 6, 6 });
 new LLDeleteDuplicates().DeleteDuplicates(head).Print();
@@ -114,4 +114,29 @@ new LLDeleteDuplicates().DeleteDuplicates(head).Print();
 PrettyPrint.Print(new MinimumCharactersForWords().GetMinChars(new string[] { "this", "that", "did", "deed", "them!", "a" }).ToList());
 
 Console.WriteLine(new CeaserCipher().Encrypt("xyz",2));
+
+List<object> test = new List<object>() {
+      5,
+      2,
+      new List<object>() { 7, -1 },
+      3,
+      new List<object>() {
+        6,
+        new List<object>() { -13, 8 },
+        4,
+      },
+    };
+
+Console.WriteLine(new ProductSum().CalculateProductSum(test));
+
+var exprRootNode = BinaryTree.Create(new() {-1,-2,-3,-4,2,8,3,2,3 },null);
+//var exprRootNode = BinaryTree.Create(new() { -3, 3, 2 }, null);
+Console.WriteLine("Expression: " + new EvaluateExpressionTree().Evaluate(exprRootNode));
+
+Console.WriteLine(new FirstNonRepeatingCharacter().Find("faadabcbbebdf"));
+
+PrettyPrint.Print(new TaskAssignment().AssignTasks(3, new() { 1, 3, 5, 3, 1, 4 }));
+
+//Console.WriteLine(new LongestPeak().FindLongestPeak(new int[] { 1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3 }));
+Console.WriteLine(new LongestPeak().FindLongestPeak(new int[] { 1,2,3,4,5,1 }));
 
