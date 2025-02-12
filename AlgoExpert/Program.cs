@@ -1,5 +1,6 @@
 ﻿using AlgoExpert;
 using AlgoExpert.Easy;
+using AlgoExpert.Hard;
 using AlgoExpert.Medium;
 using System.Xml.Linq;
 
@@ -142,3 +143,63 @@ Console.WriteLine(new LongestPeak().FindLongestPeak(new int[] { 1,2,3,4,5,1 }));
 
 Console.WriteLine(new BestSeat().Find(new int[] { 1, 1, 0, 1,1, 1, 1,0,1}));
 
+Console.WriteLine(new ZeroSumSubArray().Exist(new int[] { -5, -5, 2, 3, -2 }));
+
+PrettyPrint.Print(new MissingNumbers().FindUsingSum(new int[] { 4, 5, 1, 3 }).ToList());
+
+Console.WriteLine(new BestDigits().Calculate("321",1));
+
+PrettyPrint.Print(new TopologicalSort().DAGMethod(
+    new List<int> { 1, 2, 3, 4 },
+    new List<int[]>
+    {
+        new[] { 1, 2 },
+        new[] { 1, 3 },
+        new[] { 3, 2 },
+        new[] { 4, 2 },
+        new[] { 4, 3 }
+    }
+));
+
+Console.WriteLine(new SingleCycleCheck().IsCycleExist(new int[] { 0,1,1 }));
+
+BinaryTreeSccessor.BinaryTree root = new BinaryTreeSccessor.BinaryTree(1);
+root.left = new BinaryTreeSccessor.BinaryTree(2);
+root.left.parent = root;
+root.right = new BinaryTreeSccessor.BinaryTree(3);
+root.right.parent = root;
+root.left.left = new BinaryTreeSccessor.BinaryTree(4);
+root.left.left.parent = root.left;
+root.left.right = new BinaryTreeSccessor.BinaryTree(5);
+root.left.right.parent = root.left;
+root.left.left.left = new BinaryTreeSccessor.BinaryTree(6);
+root.left.left.left.parent = root.left.left;
+BinaryTreeSccessor.BinaryTree node = root.left.right;
+
+Console.WriteLine(new BinaryTreeSccessor().FindSuccessor(root, root.left.right).value);
+
+var node20 = new BinaryTreeSccessor.BinaryTree(20);
+var node10 = new BinaryTreeSccessor.BinaryTree(10);
+var node30 = new BinaryTreeSccessor.BinaryTree(30);
+var node5 = new BinaryTreeSccessor.BinaryTree(5);
+var node15 = new BinaryTreeSccessor.BinaryTree(15);
+var node25 = new BinaryTreeSccessor.BinaryTree(25);
+var node35 = new BinaryTreeSccessor.BinaryTree(35);
+
+// Establishing the relationships
+node20.left = node10;
+node20.right = node30;
+node10.parent = node20;
+node30.parent = node20;
+
+node10.left = node5;
+node10.right = node15;
+node5.parent = node10;
+node15.parent = node10;
+
+node30.left = node25;
+node30.right = node35;
+node25.parent = node30;
+node35.parent = node30;
+
+Console.WriteLine(new BinaryTreeSccessor().FindSuccessor(node20,node15).value);
