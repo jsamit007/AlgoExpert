@@ -203,3 +203,35 @@ node25.parent = node30;
 node35.parent = node30;
 
 Console.WriteLine(new BinaryTreeSccessor().FindSuccessor(node20,node15).value);
+
+head = new DSCreator().CreateLinkedList(new int[] {0,1,2,3,4,5 });
+new ShiftLinkedList().Shift(head, 2).Print();
+
+int[][] intervals = new int[][]
+{
+    new int[] {20, 21},
+    new int[] {22, 23},
+    new int[] {0, 1},
+    new int[] {3, 4},
+    new int[] {23, 24},
+    new int[] {25, 27},
+    new int[] {5, 6},
+    new int[] {7, 19}
+};
+
+intervals = new MergeOverlappingInterval().Merge(intervals);
+
+PrettyPrint.Print(intervals.ToList());
+
+int[][][] edges = {
+      new int[][] { new int[] { 1, 7 } },
+      new int[][] {
+        new int[] { 2, 6 }, new int[] { 3, 20 }, new int[] { 4, 3 }
+      },
+      new int[][] { new int[] { 3, 14 } },
+      new int[][] { new int[] { 4, 2 } },
+      new int[][] {},
+      new int[][] {}
+    };
+
+PrettyPrint.Print(new DijkstraAlgorithm().FindAllShortestPath(0, edges).ToList());
