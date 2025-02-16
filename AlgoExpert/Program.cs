@@ -235,3 +235,19 @@ int[][][] edges = {
     };
 
 PrettyPrint.Print(new DijkstraAlgorithm().FindAllShortestPath(0, edges).ToList());
+
+
+var heap = new MinHeap(new List<int> { 544, -578, 556, 713, -655, -359, -810, -731, 194, -531, -685, 689, -279, -738, 886, -54, -320, -500, 738, 445, -401, 993, -753, 329, -396, -924, -975, 376, 748, -356, 972, 459, 399, 669, -488, 568, -702, 551, 763, -90, -249, -45, 452, -917, 394, 195, -877, 153, 153, 788, 844, 867, 266, -739, 904, -154, -947, 464, 343, -312, 150, -656, 528, 61, 94, -581 } );
+heap.Insert(76);
+
+List<int> sorted = new List<int>();
+
+while (heap._heap.Count > 0)
+{
+    sorted.Add(heap.Remove());
+}
+PrettyPrint.Print(sorted);
+
+Console.WriteLine(new MaximizeExpression().Calculate(new int[] { 3, 6, 1, -3, 2, 7 }));
+
+Console.WriteLine(new KadanesAlgo().FindMaxSum(new int[]{ 3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4 }));
