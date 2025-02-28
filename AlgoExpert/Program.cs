@@ -2,7 +2,7 @@
 using AlgoExpert.Easy;
 using AlgoExpert.Hard;
 using AlgoExpert.Medium;
-using System.Xml.Linq;
+using AlgoExpert.VeryHard;
 
 var result = new TwoNumberSum().FindPairs(new int[] { 5, 3, 6, 4, 8 }, 10);
 foreach (var item in result)
@@ -251,3 +251,32 @@ PrettyPrint.Print(sorted);
 Console.WriteLine(new MaximizeExpression().Calculate(new int[] { 3, 6, 1, -3, 2, 7 }));
 
 Console.WriteLine(new KadanesAlgo().FindMaxSum(new int[]{ 3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4 }));
+
+Console.WriteLine(new MinimumWaitingTime().Calculate(new[] { 3,2,1,2,6 }));
+
+
+PrettyPrint.Print(new FindThreeLargestNumber().Find(new int[] { 141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7 }).ToList());
+
+List<List<int>> array = new List<List<int>>();
+/*array.Add(new List<int>() { 1, 3, 4, 10 });
+array.Add(new List<int>() { 2, 5, 9, 11 });
+array.Add(new List<int>() { 6, 8, 12, 17 });
+array.Add(new List<int>() { 7, 13, 16, 18 });
+array.Add(new List<int>() { 14, 15, 19, 20 });*/
+
+/*array.Add(new List<int>() { 0,2,3 });
+array.Add(new List<int>() { 1,4,5 });*/
+
+array.Add(new List<int>() { 1 });
+array.Add(new List<int>() { 2 });
+array.Add(new List<int>() { 6 });
+array.Add(new List<int>() { 8 });
+
+PrettyPrint.Print(new ZigZagMatrix().Traverse(array));
+
+PrettyPrint.Print(new SearchForRange().Find(new int[] { 1}, 1).ToList());
+
+Console.WriteLine(new LongestSubstringWithoutDuplication().Find("aaaaabbbccdef"));
+
+Console.WriteLine(new LongestBalancedsubstring().Calculate("((((((()()()())()))((())))()"));
+
