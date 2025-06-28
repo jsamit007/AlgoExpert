@@ -3,6 +3,8 @@ using AlgoExpert.Easy;
 using AlgoExpert.Hard;
 using AlgoExpert.Medium;
 using AlgoExpert.VeryHard;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 var result = new TwoNumberSum().FindPairs(new int[] { 5, 3, 6, 4, 8 }, 10);
 foreach (var item in result)
@@ -280,3 +282,39 @@ Console.WriteLine(new LongestSubstringWithoutDuplication().Find("aaaaabbbccdef")
 
 Console.WriteLine(new LongestBalancedsubstring().Calculate("((((((()()()())()))((())))()"));
 
+Console.WriteLine(new ShortestPath().Calculate("foo/../.."));
+
+List<int> redShirtHeights = new List<int> { 5, 8, 1, 3, 4 }; // 8 5 4 1 3
+List<int> blueShirtHeights = new List<int> { 6, 9, 2, 4, 5 }; // 9 6 5 4 2
+Console.WriteLine(new ClassPhotos().IsPhotoPossible(redShirtHeights,blueShirtHeights));
+
+Console.WriteLine(new UnderscorifyString().Operate("testthis is a testtest to see if testestest it works", "test"));
+Console.WriteLine(new UnderscorifyString().Operate("", ""));
+//Console.WriteLine(new UnderscorifyString().Operate("eeeee eee eeee", "eee"));
+
+List<int[]> input = new List<int[]>();
+input.Add(new int[] { 2, 1, 2 });
+input.Add(new int[] { 3, 2, 3 });
+input.Add(new int[] { 2, 2, 8 });
+input.Add(new int[] { 2, 3, 4 });
+input.Add(new int[] { 2, 2, 1 });
+input.Add(new int[] { 4, 4, 5 });
+
+
+DiskStacking.CalculateOrderWithMaxHeight(input).ForEach(x => Console.WriteLine(string.Join(",", x)));
+
+Console.WriteLine(LevenshteinDistance.Find("abc","yabd"));
+
+Console.WriteLine(MinimunCoinDP.CalculateMinCoins(13, new int[] { 1,10,5,8 }));
+
+Console.WriteLine(MaxSubsetSum.Calculate(new int[] { 75, 105, 120, 75, 90, 135 }));
+
+Console.WriteLine(TraverseGridGraph.FormulaWay(4,3));
+
+var options = new JsonSerializerOptions
+{
+    WriteIndented = true,
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+};
+
+Console.WriteLine(JsonSerializer.Serialize(LongestCommonSubsequence.Find("ZXVVYZW", "XKYKZPW")));
