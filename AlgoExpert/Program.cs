@@ -177,7 +177,7 @@ root.left.right = new BinaryTreeSccessor.BinaryTree(5);
 root.left.right.parent = root.left;
 root.left.left.left = new BinaryTreeSccessor.BinaryTree(6);
 root.left.left.left.parent = root.left.left;
-BinaryTreeSccessor.BinaryTree root = root.left.right;
+root = root.left.right;
 
 Console.WriteLine(new BinaryTreeSccessor().FindSuccessor(root, root.left.right).value);
 
