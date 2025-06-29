@@ -2,6 +2,7 @@
 using AlgoExpert.Easy;
 using AlgoExpert.Hard;
 using AlgoExpert.Medium;
+using AlgoExpert.Sorting;
 using AlgoExpert.VeryHard;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -176,7 +177,7 @@ root.left.right = new BinaryTreeSccessor.BinaryTree(5);
 root.left.right.parent = root.left;
 root.left.left.left = new BinaryTreeSccessor.BinaryTree(6);
 root.left.left.left.parent = root.left.left;
-BinaryTreeSccessor.BinaryTree node = root.left.right;
+BinaryTreeSccessor.BinaryTree root = root.left.right;
 
 Console.WriteLine(new BinaryTreeSccessor().FindSuccessor(root, root.left.right).value);
 
@@ -318,3 +319,7 @@ var options = new JsonSerializerOptions
 };
 
 Console.WriteLine(JsonSerializer.Serialize(LongestCommonSubsequence.Find("ZXVVYZW", "XKYKZPW")));
+
+Console.WriteLine(QuickSelect.Find(new int[] { 8, 5, 2, 9, 7, 6, 3 }, 3));
+
+Console.WriteLine(JsonSerializer.Serialize(BubbleSort.Sort(new int[] { 7,4,6,11,17,21,15})));
